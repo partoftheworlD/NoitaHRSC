@@ -1,2 +1,2 @@
 # NoitaHRSC
-This powershell script commits with seed, game time and backup time
+The powershell script commits with seed, game time and backup time
