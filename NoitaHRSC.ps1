@@ -3,8 +3,6 @@ $file = "C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\world_
 if (Test-Path -Path $file -PathType Leaf) {
     $new_state = Get-Content -Path $file | %{$_ -replace 'mods_have_been_active_during_this_run="1"','mods_have_been_active_during_this_run="0"'}
     Set-Content -Path $file -Value $new_state
-    #$new_state = Get-Content -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\mod_config.xml | %{$_ -replace 'Mod enabled="1"','Mod enabled="0"'}
-    #Set-Content -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\mod_config.xml -Value $new_state
 }
 git add .
 Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\stats\sessions
