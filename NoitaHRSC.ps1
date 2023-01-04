@@ -13,8 +13,9 @@ $date = get-date -Format 'yyyyMMddHHmm'
 $message = "$date $seed $play_time".Replace("str", "").Replace("=", ": ").Replace('"', "").Replace("_", " ")
 git commit -am $message -v
 Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\
-New-Item -Path . -Name "localBackups" -ItemType "directory"
+if (-not(Test-Path -Path ./localBackups -PathType Container)) {
+	New-Item -Path . -Name "localBackups" -ItemType "directory"
+}
 Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\localBackups
 git format-patch -2 HEAD
 git push -f
-
