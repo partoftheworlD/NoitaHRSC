@@ -1,4 +1,4 @@
-﻿Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00
+Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00
 $file = "C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\world_state.xml"
 if (Test-Path -Path $file -PathType Leaf) {
     $new_state = Get-Content -Path $file | %{$_ -replace 'mods_have_been_active_during_this_run="1"','mods_have_been_active_during_this_run="0"'}
@@ -12,3 +12,9 @@ $play_time = Select-String -Path $last_session -Pattern 'playtime_Str=".*?"' | %
 $date = get-date -Format 'yyyyMMddHHmm'
 $message = "$date $seed $play_time".Replace("str", "").Replace("=", ": ").Replace('"', "").Replace("_", " ")
 git commit -am $message -v
+Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\
+New-Item -Path . -Name "localBackups" -ItemType "directory"
+Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\localBackups
+git format-patch -2 HEAD
+git push -f
+
