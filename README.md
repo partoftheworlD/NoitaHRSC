@@ -3,7 +3,7 @@ The powershell script makes commits with backup time for more flexible save mana
 
 ![img](example.png)
 
-#How to use
+# How to use
 
 1. Create a local repository via `git init` in C:\Users\<username>\AppData\LocalLow\Nolla_Games_Noita\save00 folder. Then you will need to add a link to your repository  via `git remote add origin <link>`. Example:
 ```bash
