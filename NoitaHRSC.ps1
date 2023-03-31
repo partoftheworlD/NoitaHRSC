@@ -22,5 +22,5 @@ function cd-save00 {
 Disable-Mods
 cd-save00
 git add .
-git commit -v -am $(Generate-Message)
+git commit -v --allow-empty -am $(Generate-Message)
 git push -f
