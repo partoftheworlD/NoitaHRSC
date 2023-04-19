@@ -17,7 +17,7 @@ git push -u origin master
 
 # How to restore save
 
-To restore data use NoitaHRSC_restore
+To restore data use [NoitaHRSC_restore](https://github.com/partoftheworlD/NoitaHRSC/blob/master/NoitaHRSC_restore.ps1)
 
 ---
 Check how to create repository on [Github](https://docs.github.com/en/get-started/quickstart/create-a-repo), [Gitlab](https://docs.gitlab.com/ee/user/project/repository/) or [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/)
