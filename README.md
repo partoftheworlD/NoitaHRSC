@@ -15,5 +15,9 @@ git push -u origin master
 3. Make a save in Noita. To do this, press Esc, select Mods and press "Restart with enabled mods active". Even if you play without mods, this will restart the game and create a save in the game folder.  
 4. Run the script.
 
+# How to restore save
+
+To restore data, just go to folder with saves `C:\Users\<username>\AppData\LocalLow\Nolla_Games_Noita\save00` open a terminal and write `git checkout .` this will restore data of last save.
+
 ---
 Check how to create repository on [Github](https://docs.github.com/en/get-started/quickstart/create-a-repo), [Gitlab](https://docs.gitlab.com/ee/user/project/repository/) or [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/)
