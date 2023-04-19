@@ -12,7 +12,7 @@ The powershell script makes commits for more flexible save management, world see
 git remote add origin https://github.com/partoftheworlD/noita_save
 git push -u origin master
 ```
-3. Make a save in Noita. To do this, press Esc, select Mods and press Restart with enabled mods active. Even if you play without mods, this will restart the game and create a save in the game folder.  
+3. Make a save in Noita. To do this, press Esc, select Mods and press "Restart with enabled mods active". Even if you play without mods, this will restart the game and create a save in the game folder.  
 4. Run the script.
 
 ---
