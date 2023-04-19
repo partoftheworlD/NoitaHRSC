@@ -17,7 +17,7 @@ git push -u origin master
 
 # How to restore save
 
-To restore data, just go to folder with saves `C:\Users\<username>\AppData\LocalLow\Nolla_Games_Noita\save00` open a terminal and write `git checkout .` this will restore data of last save.
+To restore data use NoitaHRSC_restore
 
 ---
 Check how to create repository on [Github](https://docs.github.com/en/get-started/quickstart/create-a-repo), [Gitlab](https://docs.gitlab.com/ee/user/project/repository/) or [Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-git-repository/)
