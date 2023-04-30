@@ -8,10 +8,10 @@ function Disable-Mods {
 
 function Generate-Message {
     Set-Location -Path C:\Users\$env:UserName\AppData\LocalLow\Nolla_Games_Noita\save00\stats\sessions
-    $last_session = (Get-ChildItem . | Sort-Object -Descending -Property LastWriteTime | Select-Object -First 1).name
-    $seed = Select-String -Path $last_session -Pattern 'world_seed="\d+"' | ForEach-Object { $_.Matches } | ForEach-Object { $_.Value } | select-object -First 1
+    $last_session = (Get-ChildItem . | Where{$_.Name -match "stats"} | Sort-Object -Descending -Property LastWriteTime | Select-Object -First 1).name
+    $seed = Select-String -Path $last_session -Pattern 'world_seed="\d+"' | ForEach-Object { $_.Matches } | ForEach-Object { $_.Value } | Select-Object -First 1
     if (!$seed) {return "Saving stats"}
-    $play_time = Select-String -Path $last_session -Pattern 'playtime_Str=".*?"' | ForEach-Object { $_.Matches } | ForEach-Object { $_.Value } | select-object -First 1
+    $play_time = Select-String -Path $last_session -Pattern 'playtime_Str=".*?"' | ForEach-Object { $_.Matches } | ForEach-Object { $_.Value } | Select-Object -First 1
     $message = "$seed $play_time".Replace("str", "").Replace("=", ": ").Replace('"', "").Replace("_", " ").Replace(" : ", ": ")
     return $message
 }
